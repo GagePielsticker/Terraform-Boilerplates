@@ -1,3 +1,7 @@
+variable "env" {}
+variable "repositories" {}
+variable "github_connection_arn" {}
+
 resource "aws_iam_role" "codepipeline_role" {
   name = "codepipeline-role"
 
@@ -33,13 +37,14 @@ resource "aws_iam_role_policy" "codepipeline_policy" {
   })
 }
 
+
 resource "aws_codepipeline" "pipeline" {
   for_each = { for inst in var.repositories : inst.name => inst }
   name     = "github-app-codepipeline"
   role_arn = aws_iam_role.codepipeline_role.arn
 
   artifact_store {
-    location = "${var.env}-${env.value.name}-artifacts"
+    location = "${var.env}-${each.value.name}-artifacts"
     type     = "S3"
   }
 
@@ -64,7 +69,6 @@ resource "aws_codepipeline" "pipeline" {
   }
 
   stage {
-    for_each = var.env == "prod" ? [1] : [] # ONLY INCLUDE THIS STAGE FOR PRODUCTION ENVIRONMENT
     name = "Manual-Approval"
 
     action {

@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 variable "s3_bucket_name" {
-  default = "tf-backend-state" ## CHANGE NAME IT MUST BE GLOBALLY UNIQUE
+  default = "dev-pipeline-tfstate" ## CHANGE NAME IT MUST BE GLOBALLY UNIQUE
   type = string
 }
 

@@ -1,3 +1,6 @@
+variable "env" {}
+variable "repositories" {}
+
 resource "aws_iam_role" "codebuild_role" {
   name = "codebuild-role"
 
