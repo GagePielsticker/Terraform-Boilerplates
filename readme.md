@@ -1,6 +1,6 @@
 # STILL UNDER CONSTRUCTION
 TODO
-- [] Deploy automated pipeline creatore to test
+- [] Deploy test automated pipeline creatore
 - [] fargate_loadbalancer (ECS, ECR + LB deployment of containers for standard docker deployments of things such as react apps etc)
 - [] lambda_apigateway (serverless api deployment pattern)
 
@@ -11,5 +11,5 @@ TODO
 # Best Practices Followed
 - [Style & Structure](https://cloud.google.com/docs/terraform/best-practices/general-style-structure)
 - [Root Module Practices](https://cloud.google.com/docs/terraform/best-practices/root-modules)
-- [State Locking](https://rafaelmedeiros94.medium.com/goodbye-dynamodb-terraform-s3-backend-now-supports-native-locking-06f74037ad39)
+- [Modern State Locking / Storage](https://rafaelmedeiros94.medium.com/goodbye-dynamodb-terraform-s3-backend-now-supports-native-locking-06f74037ad39)
 - [Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html)
