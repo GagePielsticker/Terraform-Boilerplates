@@ -4,6 +4,7 @@ This automatically runs through a list of repos and will create pipelines for ea
 - There are a `dev`, `qa`, and `prod` environments for your project.
 - These envs are their own branches on repositories hosted on github.
 - There are two seperate pipeline variations, one for `non-prod` and one for `prod`. The `prod` pipeline requires manual approval ontop of `non-prods` pipeline.
+- The underlying pipelines that get created are simply invoked/deployed by a `buildspec.yml`. Nothing fancy.
 - An s3 bucket exist for state of the pipeline creator in each AWS environment. (Refer to s3 provisioner in repo to create them.)
 
 ## How to use
