@@ -2,7 +2,7 @@ variable "env" {}
 variable "repositories" {}
 
 resource "aws_iam_role" "codebuild_role" {
-  name = "codebuild-role"
+  name = "${var.env}-tf-pipeline-cb-role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
@@ -16,7 +16,7 @@ resource "aws_iam_role" "codebuild_role" {
   })
 }
 
-resource "aws_iam_role_policy" "codebuild_policy" {
+resource "aws_iam_role_policy" "codebuild_policy" { #Permissions given to underlying codebuilds that get created (service role)
   role = aws_iam_role.codebuild_role.id
 
   policy = jsonencode({
@@ -48,7 +48,7 @@ resource "aws_codebuild_project" "build" {
 
   environment {
     compute_type                = "BUILD_GENERAL1_SMALL"
-    image                       = "aws/codebuild/standard:6.0"
+    image                       = "aws/codebuild/amazonlinux-x86_64-standard:5.0"
     type                        = "LINUX_CONTAINER"
     privileged_mode             = false
   }

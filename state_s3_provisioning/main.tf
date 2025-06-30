@@ -3,8 +3,8 @@ provider "aws" {
 }
 
 variable "s3_bucket_name" {
-  default = "dev-pipeline-tfstate" ## CHANGE NAME IT MUST BE GLOBALLY UNIQUE
-  type = string
+  default = "s3-bucket-name-here" ## CHANGE NAME IT MUST BE GLOBALLY UNIQUE
+  type    = string
 }
 
 ## State S3 bucket
@@ -12,7 +12,7 @@ resource "aws_s3_bucket" "s3_state_bucket" {
   bucket = var.s3_bucket_name
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = true #This is here because generally speaking we dont want to delete the state bucket D:
   }
 }
 

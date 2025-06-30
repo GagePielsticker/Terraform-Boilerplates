@@ -3,7 +3,7 @@ variable "repositories" {}
 variable "github_connection_arn" {}
 
 resource "aws_iam_role" "codepipeline_role" {
-  name = "codepipeline-role"
+  name = "${var.env}-tf-pipeline-cp-role"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
@@ -17,7 +17,7 @@ resource "aws_iam_role" "codepipeline_role" {
   })
 }
 
-resource "aws_iam_role_policy" "codepipeline_policy" {
+resource "aws_iam_role_policy" "codepipeline_policy" { #Permissions given to underlying codepipelines (service role)
   role = aws_iam_role.codepipeline_role.id
 
   policy = jsonencode({
