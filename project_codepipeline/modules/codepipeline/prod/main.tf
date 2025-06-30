@@ -40,7 +40,7 @@ resource "aws_iam_role_policy" "codepipeline_policy" { #Permissions given to und
 
 resource "aws_codepipeline" "pipeline" {
   for_each = { for inst in var.repositories : inst.name => inst }
-  name     = "github-app-codepipeline"
+  name     = "${var.env}-${var.value.name} pipeline"
   role_arn = aws_iam_role.codepipeline_role.arn
 
   artifact_store {
