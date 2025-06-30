@@ -1,0 +1,1 @@
+The idea here is we keep the services and modules within `modules` and each environment specific configurations (like variables or tags) can be declared within the environment folders. To deploy a specific environment, go to the folder and run init, plan, apply.
