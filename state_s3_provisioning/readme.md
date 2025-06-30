@@ -1,0 +1,2 @@
+# Terraform State S3 Provisioner
+This is a terraform template to provision an s3 bucket with best practices in mind to store state files & locks. This is a pre-requisit to the other projects as they rely on an s3 existing for state files. Simply modify the name of the bucket within the variable and run `terraform plan` & `terraform apply`.

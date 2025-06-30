@@ -1,6 +1,6 @@
 # STILL UNDER CONSTRUCTION
 TODO
-- [] Test pipeline automation
+- [] Test pipeline automation creator
 - [] fargate_loadbalancer (ECS, ECR + LB deployment of containers for standard docker deployments of things such as react apps etc)
 - [] lambda_apigateway (serverless api deployment pattern)
 

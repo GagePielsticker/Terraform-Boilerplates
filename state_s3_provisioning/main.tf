@@ -2,9 +2,14 @@ provider "aws" {
   region = "us-east-1"
 }
 
+variable "s3_bucket_name" {
+  default = "tf-backend-state" ## CHANGE NAME IT MUST BE GLOBALLY UNIQUE
+  type = string
+}
+
 ## State S3 bucket
 resource "aws_s3_bucket" "s3_state_bucket" {
-  bucket = "tf-backend-state" ## CHANGE NAME IT MUST BE GLOBALLY UNIQUE
+  bucket = var.s3_bucket_name
 
   lifecycle {
     prevent_destroy = true

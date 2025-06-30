@@ -1,1 +1,2 @@
-The idea here is we keep the services and modules within `modules` and each environment specific configurations (like variables or tags) can be declared within the environment folders. To deploy a specific environment, go to the folder and run init, plan, apply.
+# Terraform Project Base
+This terraform boilerplate structure was created following google documentation on best practices with terraform. Infra should be defined as modules in the modules folder and referenced in the main.tf of each env as needed.
