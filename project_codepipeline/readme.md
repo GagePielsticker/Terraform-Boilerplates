@@ -7,6 +7,9 @@ This automatically runs through a list of repos and will create pipelines for ea
 - The underlying pipelines that get created are simply invoked/deployed by a `buildspec.yml`. Nothing fancy.
 - An s3 bucket exist for state of the pipeline creator in each AWS environment. (Refer to s3 provisioner in repo to create them.)
 
+## Important note
+This does not automatically create potentially needed resources for underlying pipelines (such as new s3 buckets for states of the pipelines), just the pipelines themself.
+
 ## How to use
 In each respective env folder such as `environments/dev/` there are 3 files. `backend.tf` contains the s3 bucket to use for the pipeline creator states as well as tags to attach to all the pipelines. `variable.tf` contains a list of repos & branches, and also the arn of the github app connection to use. 
 
