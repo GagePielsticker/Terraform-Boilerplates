@@ -1,0 +1,1 @@
+Uses nodejs + api gateway for a simple api setup

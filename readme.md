@@ -14,6 +14,7 @@ Terraform cannot create resources prior to terraform init. To utilize an s3 buck
 `terraform apply`
 
 # Best Practices Followed
-- (Style & Structure)[https://cloud.google.com/docs/terraform/best-practices/general-style-structure]
-- (Root Module Practices)[https://cloud.google.com/docs/terraform/best-practices/root-modules]
-- (State Locking)[https://rafaelmedeiros94.medium.com/goodbye-dynamodb-terraform-s3-backend-now-supports-native-locking-06f74037ad39]
+- [Style & Structure](https://cloud.google.com/docs/terraform/best-practices/general-style-structure)
+- [Root Module Practices](https://cloud.google.com/docs/terraform/best-practices/root-modules)
+- [State Locking](https://rafaelmedeiros94.medium.com/goodbye-dynamodb-terraform-s3-backend-now-supports-native-locking-06f74037ad39)
+- [Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html)
