@@ -1,1 +1,0 @@
-ECS + load balancer setup for containerized workloads

@@ -1,6 +1,6 @@
 terraform {
     backend "s3" {
-        bucket = "qa-tf-backend-state"
+        bucket = "qa-pipeline-tfstate"
         key = "terraform.tfstate"
         region = "us-east-1"
         encrypt = true
@@ -13,8 +13,8 @@ provider "aws" {
   default_tags {
    tags = {
      Environment = "qa"
-     Project     = "specific project"
-     Application = "larger-app"
+     Project     = "deployment-pipelines"
+     Application = "devops"
    }
  }
 }
