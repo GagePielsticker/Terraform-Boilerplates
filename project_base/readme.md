@@ -1,2 +1,2 @@
 # Terraform Project Base
-This terraform boilerplate structure was created following google documentation on best practices with terraform. Infra should be defined as modules in the modules folder and referenced in the main.tf of each env as needed.
+This terraform boilerplate structure was created following google documentation on best practices with terraform. Infra should be defined as modules in the modules folder and referenced in the main. An example of an implementation is `../project_codepipeline/`.
