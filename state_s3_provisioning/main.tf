@@ -4,7 +4,7 @@ provider "aws" {
 
 ## State S3 bucket
 resource "aws_s3_bucket" "s3_state_bucket" {
-  bucket = "tf-backend-state"
+  bucket = "tf-backend-state" ## CHANGE NAME IT MUST BE GLOBALLY UNIQUE
 
   lifecycle {
     prevent_destroy = true

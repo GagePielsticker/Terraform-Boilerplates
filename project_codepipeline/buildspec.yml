@@ -1,0 +1,11 @@
+version: 0.2
+phases:
+  build:
+    commands:
+
+      # change directory to respective environment we are running in
+      - cd environments/${ENV}
+
+      # deploy the terraform
+      - terraform plan -input=false
+      - terraform apply -input=false

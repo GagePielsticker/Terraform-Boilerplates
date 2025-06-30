@@ -12,18 +12,21 @@ variable "github_connection_id" {
 
 variable "repositories" { #Iterated through and create new pipeline for each
   type = list(object({
-    url = string
+    id = string
     name = string
+    branch = string
   }))
 
   default = [
     {
-      url = "https://github.com/xxxx/xxxx"
-      name = "my-cool-project" #Used in config names
+      id = "org/repository" #org/repo
+      name = "my-proj" #Used in config names, shorthand, no spaces use - instead
+      branch = "prod" #branch to pull from for build
     },
-    {
-      url = "https://github.com/xxxx/xxxx"
-      name = "my-cool-project" #Used in config names
+        {
+      id = "org/repository"
+      name = "my-proj"
+      branch = "prod"
     },
     ]
 }
