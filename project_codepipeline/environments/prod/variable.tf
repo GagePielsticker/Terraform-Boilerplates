@@ -25,7 +25,7 @@ variable "repositories" { #Iterated through and create new pipeline for each
     },
         {
       id = "org/repository"
-      name = "my-proj"
+      name   = "my-proj2"
       branch = "prod"
     },
     ]

@@ -4,7 +4,7 @@ variable "env" {
   description = "Environment that is currently operating."
 }
 
-variable "github_connection_id" {
+variable "github_connection_arn" {
   default = "xxxxxxxx"
   type = string
   description = "The github app connection to authenticate codepipeline source with."
@@ -25,7 +25,7 @@ variable "repositories" { #Iterated through and create new pipeline for each
     },
         {
       id = "org/repository"
-      name = "my-proj"
+      name   = "my-proj2"
       branch = "qa"
     },
     ]
