@@ -1,0 +1,2 @@
+# Cloudwatch Expiration
+This isn't terraform just a useful script i wrote to change retention periods on all cloudwatch groups currently deployed :). This can pretty easily be transformed into a lambda and automated via eventbridge schedule.

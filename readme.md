@@ -1,11 +1,9 @@
-# STILL UNDER CONSTRUCTION
-TODO
-- [] Deploy test automated pipeline creatore
-- [] fargate_loadbalancer (ECS, ECR + LB deployment of containers for standard docker deployments of things such as react apps etc)
-- [] lambda_apigateway (serverless api deployment pattern)
-
 # Foreword
 > These are terraform examples and boilerplates for future projects or common needs. These should cover what I experience in day-to-day activity as a devops engineer. I created this partly as a way to learn the technology and partly to use in the future.
+
+# Planned Updates
+- [] fargate_loadbalancer
+- [] lambda_apigateway
 
 
 # Best Practices Followed
