@@ -1,5 +1,5 @@
 # Github Repository
-Stands up a new github repository following some standard rules and gitflow patterns. It also removes a lot of unnecessary repo settings by default.
+> Stands up a new github repository following some standard rules and gitflow patterns. It also removes a lot of unnecessary repo settings by default.
 
 Repo Settings
 - has issues = false

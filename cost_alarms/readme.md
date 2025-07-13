@@ -1,2 +1,2 @@
 # Cost Alarm Module
-Set's up account budget using AWS budgets as well as email alerts for breaking 80% and 100% threshold for forecasted cost. Can be modularized fairly easy.
+> Stands up AWS Budgets at >80% actual and >100% forecaste cost. If either get crossed it will trigger emails to respective email list.

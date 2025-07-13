@@ -9,10 +9,13 @@ provider "aws" {
 
 variable "limit_amount_USD" {
   type    = string
+  description = "Cost in USD to monitor for"
   default = "20"
 }
+
 variable "emails" {
   type    = set(string)
+  description = "Set of emails to alert when thresholds crossed"
   default = ["test@test.com", "test2@test.com"]
 }
 
