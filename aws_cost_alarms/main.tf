@@ -8,15 +8,15 @@ provider "aws" {
 }
 
 variable "limit_amount_USD" {
-  type    = string
+  type        = string
   description = "Cost in USD to monitor for"
-  default = "20"
+  default     = "20"
 }
 
 variable "emails" {
-  type    = set(string)
+  type        = set(string)
   description = "Set of emails to alert when thresholds crossed"
-  default = ["test@test.com", "test2@test.com"]
+  default     = ["test@test.com", "test2@test.com"]
 }
 
 resource "aws_budgets_budget" "account_budget" {

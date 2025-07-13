@@ -8,7 +8,7 @@ resource "aws_iam_role" "codepipeline_role" {
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
     Statement = [{
-      Effect    = "Allow",
+      Effect = "Allow",
       Principal = {
         Service = "codepipeline.amazonaws.com"
       },
@@ -60,7 +60,7 @@ resource "aws_codepipeline" "pipeline" {
       output_artifacts = ["source_output"]
 
       configuration = {
-        ConnectionArn = var.github_connection_arn
+        ConnectionArn    = var.github_connection_arn
         FullRepositoryId = "${each.value.id}"
         BranchName       = "${each.value.branch}"
         DetectChanges    = "true"
@@ -72,7 +72,7 @@ resource "aws_codepipeline" "pipeline" {
     name = "Manual-Approval"
 
     action {
-      run_order = 1
+      run_order        = 1
       name             = "AWS-Admin-Approval"
       category         = "Approval"
       owner            = "AWS"
