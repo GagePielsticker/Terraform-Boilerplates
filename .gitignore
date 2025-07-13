@@ -2,3 +2,4 @@
 terraform.tfstate*
 .ds_store
 graph.png
+*.tfvars
