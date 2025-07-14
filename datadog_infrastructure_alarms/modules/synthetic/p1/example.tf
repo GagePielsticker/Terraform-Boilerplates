@@ -3,7 +3,7 @@ module "example" {
   source = "../base"
   name   = "Example Synthetic Test"
 
-  url = "https://example.com"
+  url    = "https://example.com"
   method = "GET"
   headers = {
     Content-Type = "application/json"

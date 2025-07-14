@@ -4,12 +4,14 @@ module "Infrastructure_P1_Alarms" {
   default_message    = var.default_message
   env_filter         = var.env_filter
   lambda_quota_limit = var.lambda_quota_limit
+  monitor_timescale  = var.monitor_timescale
 }
 
 module "Infrastructure_P2_Alarms" {
-  source          = "./modules/monitors/p2"
-  default_message = var.default_message
-  env_filter      = var.env_filter
+  source            = "./modules/monitors/p2"
+  default_message   = var.default_message
+  env_filter        = var.env_filter
+  monitor_timescale = var.monitor_timescale
 }
 
 #Synthetic Test

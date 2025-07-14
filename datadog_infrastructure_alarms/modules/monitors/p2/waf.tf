@@ -2,7 +2,7 @@
 module "waf_blocked_request" {
   source    = "../base"
   name      = "WAF Blocked Request"
-  query     = "sum(last_10m):sum:aws.wafv2.blocked_requests{${var.env_filter}} by {webacl}.as_count() > 2000"
+  query     = "sum(${var.monitor_timescale}):sum:aws.wafv2.blocked_requests{${var.env_filter}} by {webacl}.as_count() > 2000"
   threshold = 2000
   priority  = 2
 

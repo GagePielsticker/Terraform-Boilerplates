@@ -26,6 +26,12 @@ variable "synthetic_test_locations" {
   default     = ["aws:us-east-1"]
 }
 
+variable "monitor_timescale" {
+  description = "The time for monitors to defaultly evaluate over."
+  type        = string
+  default     = "last_15m"
+}
+
 variable "default_message" {
   type    = string
   default = <<EOT

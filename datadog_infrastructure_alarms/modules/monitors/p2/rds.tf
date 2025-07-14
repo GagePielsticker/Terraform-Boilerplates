@@ -46,7 +46,7 @@ module "rds_size_10GiB" {
 module "rds_db_load" {
   source    = "../base"
   name      = "RDS DBLoad High"
-  query     = "avg(last_10m):avg:aws.rds.dbload{${var.env_filter}} by {name} > 15"
+  query     = "avg(${var.monitor_timescale}):avg:aws.rds.dbload{${var.env_filter}} by {name} > 15"
   threshold = 15
   priority  = 1
 

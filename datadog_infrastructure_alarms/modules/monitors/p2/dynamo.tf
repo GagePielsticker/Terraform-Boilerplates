@@ -2,7 +2,7 @@
 module "dynamo_read_throttles" {
   source    = "../base"
   name      = "DynamoDB Read Throttles"
-  query     = "sum(last_10m):sum:aws.dynamodb.read_throttle_events{${var.env_filter}} by {tablename}.as_count() > 1"
+  query     = "sum(${var.monitor_timescale}):sum:aws.dynamodb.read_throttle_events{${var.env_filter}} by {tablename}.as_count() > 1"
   threshold = 1
   priority  = 2
 
@@ -13,7 +13,7 @@ module "dynamo_read_throttles" {
 module "dynamo_latency" {
   source    = "../base"
   name      = "DynamoDB High Latency"
-  query     = "avg(last_1h):avg:aws.dynamodb.successful_request_latency{${var.env_filter}} by {tablename} > 1200"
+  query     = "avg(${var.monitor_timescale}):avg:aws.dynamodb.successful_request_latency{${var.env_filter}} by {tablename} > 1200"
   threshold = 1200
   priority  = 2
 
